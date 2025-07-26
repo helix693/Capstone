@@ -2,10 +2,11 @@
 
 
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Navbar with Dropdown</title>
   <link rel="stylesheet" href="style.css">
+   <script src="jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -13,24 +14,70 @@
 
 
 
-
-  <div class="navbar">
-    <div class="logo"> 
+<div class="navbar">
+    <div class="logo">
       <img src="chints.png">
     </div>
     <div class="nav-links">
-      <a href="cool.html"> Home</a>
+      <a href="cool.html">Home</a>
       <a>About</a>
-      <a>
-
-        </div>
-      </div>
-
-
+      <a href="#" id="hoursButton">Hours</a>
     </div>
   </div>
-<h1>Chintz Culinary Experience</h1>
 
+  <div id="hoursModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Our Hours</h3>
+      <p>Monday - Friday: 9 AM - 5 PM</p>
+      <p>Saturday: 10 AM - 4 PM</p>
+      <p>Sunday: Closed</p>
+    </div>
+  </div>
+<h1>Menu</h1>
+<div class="carousel">
+  <div class="slides" id="slides">
+    <div class="slide">
+      <img src="https://via.placeholder.com/600x400?text=Slide+1" alt="Slide 1">
+      <div class="caption">This is the caption for Slide 1</div>
+    </div>
+    <div class="slide">
+      <img src="https://via.placeholder.com/600x400?text=Slide+2" alt="Slide 2">
+      <div class="caption">Caption for Slide 2 goes here</div>
+    </div>
+    <div class="slide">
+      <img src="https://via.placeholder.com/600x400?text=Slide+3" alt="Slide 3">
+      <div class="caption">Another caption for Slide 3</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button onclick="prevSlide()">❮</button>
+    <button onclick="nextSlide()">❯</button>
+  </div>
+</div>
+
+<script>
+  let currentIndex = 0;
+  const slides = document.getElementById('slides');
+  const totalSlides = document.querySelectorAll('.slide').length;
+
+  function updateSlidePosition() {
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlidePosition();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlidePosition();
+  }
+</script>
+
+<script src="scripts.js"></script>
 
 
 
