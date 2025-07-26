@@ -12,6 +12,12 @@
       background-size: 500px;
     }
 
+    .niggu {
+      margin-top: 200px;
+      margin-left: 20px;
+      font-size: 50px;
+    }
+
     .carousel {
       width: 600px;
       height: 400px;
@@ -23,6 +29,7 @@
       margin-left: 480px;
       margin-right: 480px;
       position: absolute;
+      margin-top: 30px;
     }
 
     .slides {
@@ -83,37 +90,45 @@
         text-align: center
     }
 
-    .navbar {
-      background-color: #333;
-      overflow: hidden;
-      height: 200px;
-      justify-content: space-between;
-      align-self: stretch;
-      position: absolute;
-      padding: 0 20px;
-      
-    }
+   .navbar {
+  background-color: #333;
+  overflow: hidden;
+  height: 200px;
+  display: flex;                /* Use flexbox for layout */
+  align-items: center;          /* Vertically center items */
+  justify-content: space-between; /* Space between logo and links */
+  position: absolute;
+  padding: 0 40px;              /* More padding for spacing */
+  width: 100%;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+}
 
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      padding: 14px 20px;
-      display: block;
-    }
+.logo {
+  flex: 0 0 auto;               /* Logo stays left */
+}
 
-    .navbar a:hover {
-      background-color: #575757;
-    }
+.logo img {
+  width: 150px;                 /* Set a fixed width */
+  height: 150px;
+  object-fit: contain;
+}
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-    }
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;    /* Align links to the right */
+  flex: 1;
+  gap: 40px;                    /* Even spacing between links */
+}
 
-    .logo img {
-     width: 50%;
-     height: 150px;
-    }
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+}
 
     /* Dropdown container */
     .dropdown {
