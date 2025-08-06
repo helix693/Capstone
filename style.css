@@ -11,25 +11,41 @@
       background-repeat: repeat;
       background-size: 500px;
     }
+    
+    .menuBody {
+      font-family: Arial, sans-serif;
+       background: #f0f0f0;
+      margin: 0;
+        min-height: 300vh; /* Increased height for more vertical space */
+       background-image: url("IMG_4770.JPG");
+       background-repeat: repeat;
+       background-size: 500px;
+    }
 
     .niggu {
       margin-top: 200px;
-      margin-left: 20px;
+      margin-left: 600px;
+
       font-size: 50px;
+      
     }
+    .navbar a.active {
+  background-color: #555;
+  color: #FFFF;
+  border-radius: 6px;
+}
 
     .carousel {
       width: 600px;
       height: 400px;
       overflow: hidden;
-      position: relative;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       align-self: center;
       margin-left: 480px;
       margin-right: 480px;
       position: absolute;
-      margin-top: 30px;
+      margin-bottom: 1350px;
     }
 
     .slides {
@@ -88,6 +104,13 @@
         text-decoration-thickness: 10px;
         color: #fafafa;
         text-align: center
+    }
+
+    .indexh1{
+       margin-top: 200px;
+      margin-left: 0;
+
+      font-size: 50px;
     }
 
    .navbar {
